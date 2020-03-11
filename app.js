@@ -17,12 +17,24 @@ function getComputerChoice() {
 function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
   const smallUserWord = "user".fontsize(3).sup();
   const smallCompWord = "comp".fontsize(3).sup();
   result_p.innerHTML = `${userChoice.toUpperCase()}${smallUserWord} beats ${computerChoice.toUpperCase()}${smallCompWord}. You win!`;
 }
-function lose() {}
-function draw() {}
+function lose(userChoice, computerChoice) {
+  computerScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  const smallUserWord = "user".fontsize(3).sup();
+  const smallCompWord = "comp".fontsize(3).sup();
+  result_p.innerHTML = `${userChoice.toUpperCase()}${smallUserWord} loses to ${computerChoice.toUpperCase()}${smallCompWord}. You lost...`;
+}
+function draw(userChoice, computerChoice) {
+  const smallUserWord = "user".fontsize(3).sup();
+  const smallCompWord = "comp".fontsize(3).sup();
+  result_p.innerHTML = `${userChoice.toUpperCase()}${smallUserWord} equals ${computerChoice.toUpperCase()}${smallCompWord}. It's a draw!`;
+}
 
 function game(userChoice) {
   const computerChoice = getComputerChoice();
