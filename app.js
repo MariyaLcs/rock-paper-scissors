@@ -17,7 +17,9 @@ function getComputerChoice() {
 function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
-  result_p.innerHTML = `${userChoice.toUpperCase()} beats ${computerChoice.toUpperCase()}. You win!`;
+  const smallUserWord = "user".fontsize(3).sup();
+  const smallCompWord = "comp".fontsize(3).sup();
+  result_p.innerHTML = `${userChoice.toUpperCase()}${smallUserWord} beats ${computerChoice.toUpperCase()}${smallCompWord}. You win!`;
 }
 function lose() {}
 function draw() {}
