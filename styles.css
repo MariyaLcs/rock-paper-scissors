@@ -72,3 +72,12 @@ header > h1 {
   font-size: 20px;
   margin-top: 20px;
 }
+button {
+  color: white;
+  background: #e2584d;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px auto;
+  font-size: 20px;
+  display: block;
+}
